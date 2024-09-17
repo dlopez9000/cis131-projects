@@ -1,3 +1,7 @@
+# Darlene Lopez
+# Target Heart Rate Calculator
+# This program calculates drivers are concerned with the mileage obtained by their automobiles
+
 # Initialize total miles and gallons
 total_miles = 0
 total_gallons = 0
