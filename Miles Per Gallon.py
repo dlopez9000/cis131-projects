@@ -1,5 +1,5 @@
 # Darlene Lopez
-# Target Heart Rate Calculator
+# Miles Per Gallon
 # This program calculates drivers are concerned with the mileage obtained by their automobiles
 
 # Initialize total miles and gallons
