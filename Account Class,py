@@ -1,0 +1,46 @@
+# Darlene Lopez
+# CIS 131
+# Modify code for Account class to provide read-only properties for the name and balance. 
+
+from decimal import Decimal
+
+class Account:
+    """Account class for maintaining a bank account balance with read-only properties for name and balance."""
+
+    def __init__(self, name, balance):
+        """Initialize an Account object with name and balance."""
+
+        # if balance is less than 0.00, raise an exception
+        if balance < Decimal('0.00'):
+            raise ValueError('Initial balance must be >= 0.00.')
+
+        self._name = name  # leading underscore to indicate private
+        self._balance = balance  # leading underscore to indicate private
+
+    @property
+    def name(self):
+        """Return the account name (read-only)."""
+        return self._name
+
+    @property
+    def balance(self):
+        """Return the account balance (read-only)."""
+        return self._balance
+
+    def deposit(self, amount):
+        """Deposit money to the account."""
+
+        # if amount is less than 0.00, raise an exception
+        if amount < Decimal('0.00'):
+            raise ValueError('amount must be positive.')
+
+        self._balance += amount
+
+# Create an account object with the new name and balance
+account = Account('Name', Decimal('0.00'))  # Modify the balance here
+
+# Access the name and balance
+name = account.name
+balance = account.balance
+
+print(name, balance)
