@@ -64,5 +64,4 @@ try:
 except sqlite3.Error as e:
     print(f"Error executing query: {e}")
 
-# Step 6: Close the connection
 conn.close()
